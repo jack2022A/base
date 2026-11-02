@@ -1,11 +1,13 @@
 @echo off
 setlocal
 
-set "LIVRENKI_EXE=%~dp0LivreNKI-Leve.exe"
+set "LIVRENKI_EXE=%~dp0LivreNKI-Universal.exe"
+
+if not exist "%LIVRENKI_EXE%" set "LIVRENKI_EXE=%~dp0LivreNKI-Leve.exe"
 
 if not exist "%LIVRENKI_EXE%" (
     echo.
-    echo ERRO: LivreNKI-Leve.exe nao foi encontrado.
+    echo ERRO: LivreNKI-Universal.exe nao foi encontrado.
     echo Coloque Iniciar-LivreNKI.bat na mesma pasta do programa.
     echo.
     pause
